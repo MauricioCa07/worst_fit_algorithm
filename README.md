@@ -1,10 +1,6 @@
 # (C)ontinuous (M)emory (A)lgorithms (cma)
 
-This is is a simulator of continuous memory algorithms:
-
-   * first fit
-   * best fit
-   * worst fit
+This is a simulator of the **Worst Fit** continuous memory allocation algorithm.
 
 Each algorithm receives three parameters:
    * `mem_avail`: a list of tuples, base and limit.
@@ -36,14 +32,14 @@ Windows
 SET PYTHONPATH=%PYTHONPATH%;<path-of-your-project>
 ```
 
-Running the test, replace with the name of your algorithm implementation: `first`, `best`, `worst`.
+## Running the test
 
 ```shell
-python3 -m unittest test/test_basic_<your_algorithm>_fit.py
+python3 -m unittest tests/test_basic_worst_fit.py
 ```
 
 ```shell
-python -m unittest test/test_basic_<your_algorithm>_fit.py
+python -m unittest tests/test_basic_worst_fit.py
 ```
 
 ## Execute cma simulator
@@ -61,53 +57,33 @@ python -p pip install click
 To run the program
 
 ```shell
-python3 cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt
+python3 cma.py --memmap ./resources/memmap/memmap_1.txt --reqs ./resources/reqs/reqs_1.txt
 ```
 
 ```shell
-python cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt
+python cma.py --memmap ./resources/memmap/memmap_1.txt --reqs ./resources/reqs/reqs_1.txt
 ```
 
 The previous execution executes all algorithms you can change to execute different algorithm.
 
-### To execute the first algorithm.
-
-```shell
-python3 cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --function first
-```
-
-```shell
-python cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --function first
-```
-
-### To execute the best algorithm.
-
-```shell
-python3 cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --function best
-```
-
-```shell
-python cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --function best
-```
-
 ### To execute the worst algorithm.
 
 ```shell
-python3 cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --function worst
+python3 cma.py --memmap ./resources/memmap/memmap_1.txt --reqs ./resources/reqs/reqs_1.txt --function worst
 ```
 
 ```shell
-python cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --function worst
+python3 cma.py --memmap ./resources/memmap/memmap_1.txt --reqs ./resources/reqs/reqs_1.txt --function worst
 ```
 
 ### To execute in different possition
 
 ```shell
-python3 cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --pos 3
+python3 cma.py --memmap ./resources/memmap/memmap_1.txt --reqs ./resources/reqs/reqs_1.txt --pos 3
 ```
 
 ```shell
-python cma.py --memmap .\resources\memmap\memmap_1.txt --reqs .\resources\reqs\req_1.txt --pos 3
+python cma.py --memmap ./resources/memmap/memmap_1.txt --reqs ./resources/reqs/reqs_1.txt --pos 3
 ```
 
 
